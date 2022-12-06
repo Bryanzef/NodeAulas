@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--SINTAXE DO EJS-->
+    
+    <!--include server para incluir algo, então os arquivos serão incluidos dentros dos ()-->
+    <%- include("../partials/head"); %> 
+<body class="container">
+    <%- include("../partials/header"); %>
+    <main>
+        <div class="jumbotron">
+            <h1>NODE + EJS</h1>
+            <p>Aprendendo EJS</p>
+            <p> <%= subtitle%> </p>
+        </div>
+
+        <ul> <!--RECEBE o ARRAY DE OBJETOS    -->
+            <% qualitys.forEach(function(quality) { %>
+                <li>
+                    <strong><%= quality.title %></strong><%= quality.message %>
+                </li>
+           <% })%>
+          
+           
+      
+        </ul>
+    </main>
+    <%- include("../partials/footer"); %>
+    
+</body>
+</html>
